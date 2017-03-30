@@ -1,0 +1,70 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  @include nl;
+  margin: 0 -7px;
+  font-size: 0;
+  margin-bottom: 20px;
+  margin-top: 23px;
+
+  > li {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 0;
+    line-height: normal;
+    font-family: Arial, sans-serif;
+
+    &.active{
+     >*{
+       cursor: text;
+       &:hover{
+         text-decoration: none;
+       }
+     }
+    }
+
+    &:after {
+      // [converter] Workaround for https://github.com/sass/libsass/issues/1115
+      content: "\\"; // Unicode space added since inline-block means non-collapsing white-space
+      margin: 0 7px;
+      background-color: transparent;
+      color: #c1b083;
+      //@include bg($breadcrumb-after);
+      font-size: 14px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    >*{
+      padding: 0 7px;
+      text-decoration: none;
+      display: inline-block;
+      vertical-align: middle;
+      color: #6a6a6a;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 35px;
+      >span{
+        border-bottom: 1px solid transparent;
+      }
+    }
+    >a{
+      &:hover{
+        >span{
+         border-bottom-color: rgba(106, 106, 106, 0.3);
+        }
+      }
+    }
+  }
+
+  > .active {
+    color: $breadcrumb-active-color;
+  }
+  + h1, +.h1,
+  + h2, +.h2,
+  + h3, +.h2{
+    margin-top: 0px;
+  }
+}

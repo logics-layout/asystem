@@ -1,0 +1,76 @@
+mixin modal()
+    #callback(class="modal fade")
+        .modal-dialog.modal-sm
+            button(type="button", class="close", data-dismiss="modal", aria-hidden="true")
+                i.s-clearModal
+            .modal-content
+                .modal-body
+                    p.modal-title.text-center Заказать звонок
+                    form#callback-form
+                        .form-group
+                            input.form-control(placeholder="Имя")
+                        .form-group
+                            input.form-control(placeholder="Телефон")
+                        button.btn.btn-green.ttu.btn-radius_none.btn-width.btn-lg Отправить
+
+    #selection(class="modal fade")
+        .modal-dialog.modal-lg
+            button(type="button", class="close", data-dismiss="modal", aria-hidden="true")
+                i.s-clearModal
+            .modal-content
+                .modal-body
+                    p.modal-title.ttu Подбор запчасти  по VIN (номеру шасси)
+                    .row
+                        .col-lg-5
+                            p.text-orange 1. Информация об автомобиле
+                            .form-group.two
+                                label VIN код или номер шасси
+                                input.form-control.two(placeholder="VIN код или номер шасси")
+                            .form-group.two
+                                label Марка автомобиля
+                                    sup *
+                                input.form-control.two(placeholder="VIN код или номер шасси")
+
+                        .col-lg-1
+                        .col-lg-6
+                            p.text-orange 2. Ваш запрос
+                            .row.col-lg-10.col-xs-12
+                                .form-group.two
+                                    label Необходимые запчасти
+                                        sup *
+                                    input.form-control.two(placeholder="Названия деталей")
+                            p: small Вы можете указать несколько запчастей через запятую. Не забудьте уточнить сторону запчасти (правая/левая; передняя/задняя). Вы можете указать название или каталожный номер запчасти, либо любой известный вам номер производителя
+
+                            .row.col-lg-10.col-xs-12
+                                .form-group.two
+                                    label Комментарий
+                                    textarea(rows='4').form-control.two
+                    br
+                    .row
+                        .col-lg-5
+                            p.text-orange 3. Фотография Вашей  сломанной запчасти или автомобиля:
+                            label.btn.btn-orange.btn-file
+                                input(type="file", style="display: none;")
+                                i.s-link
+                                |Прикрепить фото
+                            br
+                            br
+
+                        .col-lg-1
+                        .col-lg-6
+                            p.text-orange 4. Контактные данные
+                            .form-group.two
+                                label Номер мобильного телефона
+                                    sup *
+                                input.form-control.two(placeholder="+7")
+                            .form-group.two
+                                label Адрес электронной почты
+                                input.form-control.two(placeholder="mail@gmail.com")
+                            .form-group.two
+                                label Представьтесь
+                                    sup *
+                                input.form-control.two(placeholder="Иванов Иван")
+
+                    br
+                    .text-center
+                        button.btn.btn-green.ttu(style="width: 344px;max-width: 100%;height: 53px;") Отправить
