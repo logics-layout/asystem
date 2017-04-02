@@ -7,6 +7,18 @@ body, html{
 
 
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+  .slider-index{
+    &__title{
+      font-size: 60px;
+      line-height: 74px;
+    }
+    &__titleSub{
+      font-size: 26px;
+    }
+    &__table {
+      height: 480px;
+    }
+  }
   .itemList{
     &__section{
       width: 33.33%;
@@ -60,6 +72,28 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .slider-index{
+    &-dotsBlock{
+      &-dots{
+        top: 40px;
+      }
+    }
+    &__section{
+      padding: 80px 0;
+    }
+    &__table {
+      height: auto;
+    }
+    &__title{
+      font-size: 40px;
+      line-height: 54px;
+      margin-bottom: 10px;
+    }
+    &__titleSub{
+      font-size: 20px;
+    }
+  }
+
   .item {
     padding-left: 20px;
     padding-right: 20px;
@@ -308,6 +342,21 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .slider-index{
+    &-dotsBlock-dots {
+      top: 20px;
+      right: 0;
+      left: 0;
+    }
+    &__title{
+      font-size: 24px;
+      line-height: 37px;
+    }
+    &__titleSub{
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
   .callback-inner{
     padding: 20px 15px;
     margin-left: -15px;

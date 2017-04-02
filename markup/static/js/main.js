@@ -35,30 +35,16 @@ $(window).on({
 });
 
 if ($.fn.slick) {
-    $('.slider-inner-el').slick({
+    $('.slider-index-el').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: false,
-        arrows: true,
-        prevArrow: $('.slider-inner .slick-prev'),
-        nextArrow: $('.slider-inner .slick-next'),
-        // appendDots: $('.header__sliderDots')
+        dots: true,
+        arrows: false,
+        appendDots: $('.slider-index-dotsBlock-dots')
         // autoplay: true,
         // autoplaySpeed: 3000,
         // adaptiveHeight: true,
-        variableWidth: true,
-        responsive: [
-            {
-                breakpoint: 991,
-                settings: {
-                    dots: true,
-                    adaptiveHeight: true,
-                    variableWidth: false,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
-            },
-        ]
+        // variableWidth: true,
     });
 
     $('.itemList_slider').slick({
