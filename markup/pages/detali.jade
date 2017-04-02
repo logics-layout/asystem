@@ -1,0 +1,208 @@
+extends main
+
+include ../components/item/item
+
+block head
+    - var headData = {title: "Фасовочный автомат  WP-1440.05"}
+    - var callback = true
+
+    link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
+
+block content
+    .container
+        h1 Фасовочный автомат  WP-1440.05
+        br
+        .row
+            .col-lg-push-6.col-lg-6
+                .detali
+                    .detali__slider
+                        .detali__slider-main
+                            .section: img(src="http://foodextrusion.eu/images/oborudovanie/fas-upak/PO/upak-waiz-PO.jpg")
+                            .section: img(src="http://makiz-vostok.ru/2.files/stakan.jpg")
+                            .section: img(src="http://www.metaprom.ru/board_foto/1484490826foto1_big.jpg")
+                            .section: img(src="http://shart.biz/img/photos/xl/149.jpg")
+                            .section: img(src="http://obkit.ru/sites/default/files/styles/scale_crop_480x387/public/field/product/signum-s180t.jpg?itok=dqsyT26l")
+                            .section: img(src="http://foodextrusion.eu/images/oborudovanie/fas-upak/PO/upak-waiz-PO.jpg")
+                            .section: img(src="http://makiz-vostok.ru/2.files/stakan.jpg")
+                            .section: img(src="http://www.metaprom.ru/board_foto/1484490826foto1_big.jpg")
+                            .section: img(src="http://shart.biz/img/photos/xl/149.jpg")
+                            .section: img(src="http://obkit.ru/sites/default/files/styles/scale_crop_480x387/public/field/product/signum-s180t.jpg?itok=dqsyT26l")
+
+                        .detali__slider-preview
+                            .detali__slider-preview-slider
+                                .section(style="background-image: url('http://foodextrusion.eu/images/oborudovanie/fas-upak/PO/upak-waiz-PO.jpg');")
+                                .section(style="background-image: url('http://makiz-vostok.ru/2.files/stakan.jpg');")
+                                .section(style="background-image: url('http://www.metaprom.ru/board_foto/1484490826foto1_big.jpg');")
+                                .section(style="background-image: url('http://shart.biz/img/photos/xl/149.jpg');")
+                                .section(style="background-image: url('http://obkit.ru/sites/default/files/styles/scale_crop_480x387/public/field/product/signum-s180t.jpg?itok=dqsyT26l');")
+                                .section(style="background-image: url('http://foodextrusion.eu/images/oborudovanie/fas-upak/PO/upak-waiz-PO.jpg');")
+                                .section(style="background-image: url('http://makiz-vostok.ru/2.files/stakan.jpg');")
+                                .section(style="background-image: url('http://www.metaprom.ru/board_foto/1484490826foto1_big.jpg');")
+                                .section(style="background-image: url('http://shart.biz/img/photos/xl/149.jpg');")
+                                .section(style="background-image: url('http://obkit.ru/sites/default/files/styles/scale_crop_480x387/public/field/product/signum-s180t.jpg?itok=dqsyT26l');")
+
+
+
+                    br
+                    .detali__price
+                        span.hidden-sm-down &nbsp;&nbsp;&nbsp;
+                        span.detali__price-title Цена:
+                        | &nbsp;&nbsp;&nbsp;&nbsp;
+                        span.detali__price-content
+                            span.detali__price-default
+                                span.detali__price-price 197 850
+                                    +icon('rub')
+                                |&nbsp;
+                                sup.detali__price-discount 197 850
+                                    +icon('rub')
+                    br
+                    ul.detali__features
+                        li
+                            span Модель
+                            span WP-1440.05
+                        li
+                            span Дисплей
+                            span 10.4-дюймовый сенсорный экран
+                        li
+                            span Количество взвешивающих
+                                br
+                                |ковшов
+                            span 10
+                        li
+                            span Объем ковша
+                            span 1л
+                        li
+                            span Материал
+                            span 304 нержавеющая сталь
+                        li
+                            span Диапазон взвешивания
+                            span 10-1000г
+                        li
+                            span Погрешность взвешивания
+                                br
+                                |ковша
+                            span + 0,3…1,5г
+                        li
+                            span Максимальная ширина
+                                br
+                                |рулона упаковочной пленки
+                            span 400мм
+                        li
+                            span Ширина упакованного пакета
+                            span 60-190мм
+                        li
+                            span Длинна упакованного пакета
+                            span 50-230мм
+                        li
+                            span Привод подачи рулона
+                            span Сервопривод
+                        li
+                            span Расход воздуха
+                            span 0,3М /мин 0,6МПа
+                        li
+                            span Производительность
+                            span 60 мешков/мин
+                        li
+                            span Потребляемая мощность
+                            span 5кВТ
+                        li
+                            span Характеристики напряжения
+                            span 220В 50Гц/60Гц
+                        li
+                            span Масса оборудования
+                            span 640кг
+                        li
+                            span Размер в упакованном виде
+                            span 1556*1366*2078мм
+                    br.hidden-lg-up
+
+            .col-lg-pull-6.col-lg-6
+                h2 Основная функция
+                p Фасовочный автомат предназначен для точного дозирования и упаковки сыпучих материалов, а так же учета произведенной продукции. Благодаря удобной технической конструкции и гибкой коммуникации системы управления автомат можно внедрить в любой производственный процесс. Весь цикл производства является полностью автоматическим.
+                h2 Основные преимущества
+                ul
+                    li: p Высокая точность в сочетании  с высокой скоростью
+                    li: p Сенсорный дисплей позволяет отслеживать режимы работы автомата и  менять основные настройки
+                    li: p Простота конструкции позволяет легко производить наладочные работы и ТО
+                    li: p Компактные размеры, уникальная цельная конструкция автомата позволяет разместить его на небольшой площади..
+                    li: p Сервопривод осуществляет точное позиционирование пленки в момент ее спаивания и разделения
+                    li: p Быстрая окупаемость
+
+                h2 Применение
+                p Дозирования и упаковки сыпучих материалов
+                h2 Продукты питания
+                p Заморженные полуфабрикаты, Семена, Орехи, кофе (зерна/ фасоли), чай, сахар, тертый Сыр, Хлебобулочные Изделия, Конфеты И Кондитерские Изделия, Рис, Орехи И Сухофрукты, Специи, Макароны, Корм (гранулы) и т. д
+                h2 Другие механические изделия, детали
+                p Гайки, Болты, Шайбы, Авто, Электрических и сантехнических деталей и т. д.
+
+                .callback-inner
+                    .callback-inner__title Заказать оборудование
+                    .form-group
+                        input(placeholder="Контактное лицо").form-control
+                    .form-group.two
+                        input(placeholder="Телефон").form-control
+                    .form-group
+                        button.btn.btn-red.btn-width.btn-md.ttu Отправить
+
+
+
+    .line-dashed: .container
+
+
+    .container
+        h2.title Возможно вас заинтересует
+        .itemList.itemList_slider
+            -for(var i=0;i<4;i++)
+                .itemList__section
+                    +item(i)
+        br
+        br
+        .text-center
+            a(href="#").big-link.not-styleLink.color-blue
+                span.color-blue__title.color-blue__title_viewBorder Смотреть еще
+                |&nbsp;&nbsp;&nbsp;
+                i.s-pagination-next
+        br
+
+
+block script
+    //script(type="text/javascript" src="http://api-maps.yandex.ru/2.1/?lang=ru_RU")
+    script(src="%=static=%js/separate-js/slick.min.js" type="text/javascript")
+    //script(src="%=static=%js/separate-js/jquery.magnific-popup.min.js" type="text/javascript")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -60,20 +60,79 @@ if ($.fn.slick) {
             },
         ]
     });
-    $('.plan__floors-slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: false,
-        infinite: false,
-        // fade: true,
-        arrows: true,
-        vertical: true,
-        prevArrow: $('.plan__floors .slick-top'),
-        nextArrow: $('.plan__floors .slick-bottom'),
+
+    $('.itemList_slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots: true,
+        infinite: true,
+        arrows: false,
         // appendDots: $('.header__sliderDots')
         // autoplay: true,
         // autoplaySpeed: 3000,
         // adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1170,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                }
+            },
+            {
+                breakpoint: 735,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 483,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+
+    var detaliSliderMain = $('.detali__slider-main');
+    var detaliSliderPreviewSlider = $('.detali__slider-preview-slider');
+
+    detaliSliderMain.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        arrows: false,
+        asNavFor: detaliSliderPreviewSlider,
+        adaptiveHeight: true,
+    });
+    detaliSliderPreviewSlider.slick({
+        slidesToShow: 7,
+        slidesToScroll: 1,
+        dots: false,
+        infinite: true,
+        arrows: false,
+        vertical: true,
+        verticalSwiping: true,
+        asNavFor: detaliSliderMain,
+        focusOnSelect: true,
+        // autoplay: true,
+        // autoplaySpeed: 3000,
+        // adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 480,
+                settings: {
+                    vertical: false,
+                    verticalSwiping: false,
+                    slidesToShow: 4,
+                    slidesToScroll: 4,
+                }
+            },
+        ]
     });
 }
 

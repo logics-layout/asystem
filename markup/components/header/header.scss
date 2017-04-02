@@ -1,4 +1,6 @@
 .header{
+  position: relative;
+  z-index: 9;
   &__top{
     padding-top: 26px;
     padding-bottom: 33px;

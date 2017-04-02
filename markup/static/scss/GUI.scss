@@ -14,7 +14,7 @@
   font-family: Neris, sans-serif;
 }
 a{
-  color: #946425;
+  color: $mainColor;
   cursor: pointer;
   text-decoration: none;
   &:focus {
@@ -24,11 +24,19 @@ a{
     text-decoration: none;
   }
   &:not(.not-styleLink){
-    @include link-border-color(#946425);
+    @include link-border-color($mainColor);
   }
   .not-styleLink{
     text-decoration: underline;
   }
+}
+
+.big-link{
+  color: #006fbe;
+  font-family: Neris, sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 25px;
 }
 
 .ttu{
@@ -68,11 +76,13 @@ h2, .h2{
     margin-top: 0;
   }
 }
-
-.h2{
-  &_margin-big{
-    margin-bottom: 40px;
-  }
+.title{
+  color: #28252e;
+  font-family: Neris, sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 34px;
+  margin-bottom: 40px;
 }
 
 h3, .h3{
@@ -152,13 +162,12 @@ table{
 .pagination{
   @include nl;
   font-size: 0;
-  margin: 20px -5px;
-  margin-bottom: -5px;
+  margin: 20px -4.5px;
 
   li{
     display: inline-block;
     font-weight: 400;
-    padding: 5px;
+    padding: 0 4.5px;
     &:not(.active){
       >*{
         &:hover{
@@ -166,25 +175,24 @@ table{
           //outline-offset: -2px;
           //color: #fd6910;
           border-color: #0b6ab3;
+          border-width: 2px;
+          line-height: 39px;
         }
       }
     }
     &.active{
       >*{
-        background-color: #fc0;
-        color: black;
-        span{
-          border-bottom-color: transparent;
-        }
+        background-color: #e7e9e9;
+        color: #636363;
+        border-color: #e7e9e9;
       }
     }
     &.next{
       width: auto;
-      padding-left: 10px;
-      padding-right: 10px;
+      padding-left: 24.5px;
       >*{
-        //border: 1px solid #bebebe;
         padding: 0 15px;
+        width: auto;
       }
       i{
         margin-left: 40px;
@@ -192,16 +200,17 @@ table{
       }
     }
     >*{
-      width: 35px;
-      height: 35px;
+      width: 41px;
       display: block;
       text-align: center;
-      line-height: 38px;
       font-weight: 400;
       text-decoration: none;
-      color: #575757;
-      border: none;
-      font-size: 18px;
+      border: 1px solid #c7cacd;
+      border-radius: 3px;
+      color: #636363;
+      font-size: 14px;
+      line-height: 41px;
+
       span{
         @include link-border-color(#575757);
       }
@@ -506,7 +515,7 @@ table{
 
 .color-blue{
   color: rgba(0, 111, 190, 1);
-  .color-blue__title{
+  &__title{
     border-bottom: 1px solid transparent;
     &_viewBorder{
       border-bottom-color: rgba(0, 111, 190, 0.3);

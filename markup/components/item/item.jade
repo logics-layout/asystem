@@ -1,0 +1,25 @@
+mixin item(num)
+    - num = num || 0;
+    - var rowItem = {}
+    - if(item.list[num])
+        - rowItem = item.list[num]
+    - else
+        - rowItem = item.list[0]
+
+
+    a(href="#").item.not-styleLink.text-center
+        -if(rowItem.discount)
+            span.db.item__discount=rowItem.discount
+        span.db.item__img: +img('/assets/item/1')
+        span.db.item__title Фасовочный автомат WP-1440.05
+        span.db.item__price
+                span.item__price-default=rowItem.price.default
+                    +icon('rub')
+                -if(rowItem.price.discount)
+                    | &nbsp;
+                    sup.item__price-discount=rowItem.price.discount
+                        +icon('rub')
+
+        button.item__btn Заказать
+
+
