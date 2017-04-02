@@ -23,11 +23,9 @@
   //transition: .2s;
 
   color: white;
-
   font-size: 12px;
   font-weight: 500;
-
-  border-radius: 4px;
+  border-radius: 0;
 
   svg{
     display: inline-block;
@@ -96,8 +94,8 @@ a.btn {
 .btn-green {
   @include button-variant(#fff, #61b112);
 }
-.btn-cream{
-  @include button-variant(#1b1b1b, #dcc484);
+.btn-red{
+  @include button-variant(#fff, #e70016);
 }
 
 // Link buttons
@@ -152,15 +150,14 @@ a.btn {
 // --------------------------------------------------
 
 .btn-lg {
-  font-size: 18px;
-  padding: 17.5px 60px;
-  max-width: 100%;
+  font-size: 22px;
+  padding: 11px 60px;
+  font-weight: 600;
 }
 .btn-input {
-  font-size: 15px;
-  padding-top: 14.5px;
-  padding-bottom: 14.5px;
-  max-width: 100%;
+  font-size: 20px;
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
 // Block button

@@ -7,10 +7,133 @@ body, html{
 
 
 @include my-media-query(max, map_get($grid-breakpoints, xl) - 1) {
+  .header{
+    &__nav li a {
+      font-size: 16px;
+      line-height: 53px;
+    }
+    &__logo{
+      margin-top: 10px;
+    }
+    &__contacts {
+      &-phone{
+        font-size: 18px;
+      }
+      &-callback {
+        font-size: 14px;
+      }
+    }
+    &__top{
+      .header__contacts{
+        margin-top: 0;
+      }
+    }
+    &__toggle-link{
+      color: #0e6eb2;
+      font-size: 17px;
+    }
+    &__toggle-list {
+      width: 290px;
+      ul{
+        padding: 13px 25px;
+        li a {
+          font-size: 15px;
+          padding: 6px 0;
+        }
+      }
+    }
 
+    &__sections{
+      &-section{
+        &_search {
+          width: 465px;
+        }
+      }
+    }
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, lg) - 1) {
+  .callback {
+    .container {
+      padding-bottom: 40px;
+      padding-top: 50px;
+    }
+    &__title {
+      font-size: 25px;
+      line-height: 29px;
+      margin-bottom: 30px;
+    }
+  }
+  .copyright{
+    margin: 0 auto;
+    &> * + * {
+      padding-left: 20px;
+    }
+  }
+  .footer {
+    font-size: 13px;
+    line-height: 22px;
+  }
+  .header{
+    &__logo{
+      text-align: center;
+      margin-bottom: 10px;
+    }
+    &__nav{
+      li a {
+        font-size: 16px;
+        line-height: 48px;
+      }
+    }
+    &__top {
+      padding-top: 9px;
+      padding-bottom: 14px;
+    }
+
+    &__sections{
+      //border-right: ;
+      &-section{
+        padding: 0 12px;
+      }
+    }
+    &__toggle-link {
+      font-size: 14px;
+      font-weight: 400;
+      i {
+        margin-left: 15px;
+      }
+    }
+    &__sections{
+      &-section{
+        position: static;
+        &_search {
+          width: 380px;
+        }
+      }
+    }
+    &__bottom {
+      padding: 13px 0;
+    }
+    &__fix-buffer{
+      height: 56px;
+    }
+    &.fix{
+      .header__fix{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9;
+      }
+    }
+    &__toggle{
+      &-list {
+        width: 100%;
+        padding-top: 0;
+      }
+    }
+  }
 
 }
 
@@ -27,17 +150,106 @@ body, html{
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, lg)) {
+  .header{
+    &.fix{
+      .header__fix{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 9;
+      }
+      .header__fix-buffer{
+        height: 88px;
+      }
+    }
+  }
 
 }
 
 @include my-media-query(min, map_get($grid-breakpoints, xl)) {
+  .callback {
+    &__form {
+      width: 1011px;
+      &-cell{
+        &_btn{
+          width: 329px;
+        }
+      }
+    }
+  }
 
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+  .callback {
+    &__form {
+      display: block;
+      &-cell {
+        display: block;
+        +*{
+          padding-left: 0;
+        }
+      }
+    }
+  }
 
+  .footer {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .header {
+
+    &__nav {
+      margin: 0 -9px;
+      margin-bottom: 10px;
+      li a {
+        font-size: 14px;
+        line-height: 26px;
+        padding: 0 9px;
+      }
+    }
+    &__contacts{
+      display: table;
+      margin: 0 auto;
+    }
+  }
+  html, body {
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .breadcrumb {
+    margin-left: -5px;
+    margin-right: -5px;
+    > li {
+      &:after {
+        margin: 0 5px;
+      }
+      > * {
+        padding: 0 5px;
+        font-size: 13px;
+      }
+    }
+  }
+  h1, .h1{
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 25px;
+  }
+  h2, .h2{
+    font-size: 21px;
+    line-height: 22px;
+  }
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .callback__title {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  ul{
+    padding-left: 44px;
+  }
 
 }

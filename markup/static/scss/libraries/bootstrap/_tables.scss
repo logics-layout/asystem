@@ -36,9 +36,12 @@ th {
         @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
           padding: 5px 9px;
         }
-        padding: 20px 21px;
+        padding: 13px 27px;
+        line-height: $line-height-base;
+        //border-top: 1px solid $table-border-color;
+        vertical-align: middle;
         +*{
-          //border-left: 3px solid #fff;
+          border-left: 2px solid #fff;
         }
       }
     }
@@ -53,23 +56,23 @@ th {
       padding-top: 5px;
       padding-bottom: 5px;
     }
-    padding-top: 10px;
-    padding-bottom: 10px;
-    p{
-      &:last-child{
-        margin-bottom: 0;
-      }
-    }
+    padding-top: 17px;
+    padding-bottom: 17px;
+    background-color: #f0f3f4;
   }
   > thead > tr > th {
+    //vertical-align: bottom;
+    //font-weight: 700;
+    background-color: $mainColor;
     font-weight: 400;
-    background-color: #e31948;
     color: white;
+    font-size: 14px;
+    line-height: 20px;
 
-    //@include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
-    //  font-size: 13px;
-    //  line-height: 16px;
-    //}
+    @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+      font-size: 13px;
+      line-height: 16px;
+    }
   }
   // Remove top border from thead by default
   > caption + thead,
@@ -84,7 +87,7 @@ th {
   }
   // Account for multiple tbody instances
   > tbody + tbody {
-    //border-top: 2px solid $table-border-color;
+    border-top: 1px solid $table-border-color;
   }
 
   // Nesting
@@ -121,14 +124,14 @@ th {
     > tr {
       > th,
       > td {
-        //border-bottom-width: 2px;
+        border: 3px solid $table-border-color;
       }
     }
   }
   > thead > tr {
     > th,
     > td {
-      //border-bottom: 5px solid;
+      border-bottom-width: 5px;
       //border-bottom-color: #e3000f;
     }
   }
@@ -140,19 +143,8 @@ th {
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 
 .table-striped {
-  > tbody{
-    border: 1px solid $table-border-color;
-    border-top: none;
-  }
-  > thead > tr > th,
-  > tbody > tr > td{
-    +*{
-      border-left: 1px solid #d1d1d1;
-    }
-  }
-  > tbody > tr > td{
-    border-bottom: 1px solid $table-border-color;
-    //background-color: #eceef0;
+  > tbody > tr:nth-of-type(2n) {
+    background-color: $table-bg-accent;
   }
 }
 

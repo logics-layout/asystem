@@ -34,6 +34,26 @@ html(class="no-js", lang="ru")
 
             .page__buffer
         .page__footer
+            .callback
+                .container
+                    p.callback__title.text-center Затрудняетесь с выбором оборудования?
+                        br
+                        |Мы поможем вам или проконсультируем по другим вопросам
+
+                    .callback__form
+                        .callback__form-cell
+                            .form-group
+                                input(placeholder="Контактное лицо").form-control
+                        .callback__form-cell
+                            .form-group
+                                input(placeholder="Телефон").form-control
+                        .callback__form-cell.callback__form-cell_btn
+                            buttom.btn.btn-red.btn-input.btn-width Отправить
+
+
+
+
+
             +footer()
 
         +modal()

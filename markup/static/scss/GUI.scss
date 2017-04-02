@@ -10,6 +10,9 @@
 @import "libraries/bootstrap/navs";
 @import "libraries/bootstrap/dropdowns";
 
+.btn {
+  font-family: Neris, sans-serif;
+}
 a{
   color: #946425;
   cursor: pointer;
@@ -43,8 +46,9 @@ a{
 }
 
 h1, .h1{
-  color: black;
-  font-size: 52px;
+  color: #28252e;
+  font-family: Neris, sans-serif;
+  font-size: 48px;
   font-weight: 300;
   line-height: 53px;
   margin-bottom: 30px;
@@ -54,10 +58,11 @@ h1, .h1{
 }
 
 h2, .h2{
-  color: #bfa671;
-  font-size: 42px;
-  font-weight: 100;
-  line-height: 50px;
+  color: #0072c3;
+  font-family: Neris, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 25px;
   margin-bottom: 25px;
   &:first-child{
     margin-top: 0;
@@ -71,12 +76,13 @@ h2, .h2{
 }
 
 h3, .h3{
-  color: #70747b;
-  font-size: 24px;
   font-weight: 300;
-  line-height: normal;
   margin-bottom: 25px;
-  margin-top: 25px;
+  margin-top: 20px;
+  color: #818181;
+  font-family: Neris, sans-serif;
+  font-size: 20px;
+  line-height: 25px;
   &:first-child{
     margin-top: 0;
   }
@@ -91,15 +97,15 @@ hr{
   margin: 45px 0;
 }
 
-
-//ol, ul{
-//  list-style: none;
-//  padding: 0;
-//  li{
-//    position: relative;
-//    padding-left: 32px;
-//  }
-//}
+ul{
+  list-style-image: url("%=static=%general/list-style-image.png");
+  padding: 0;
+  list-style-position: outside;
+  padding-left: 57px;
+  p{
+    margin-bottom: 10px;
+  }
+}
 //ol{
 //  li {
 //    counter-increment: li;
@@ -124,7 +130,6 @@ hr{
 
 
 table{
-  font-family: Arial, sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 25px;
@@ -462,4 +467,59 @@ table{
     }
   }
 }
+
+.color-black{
+  color: rgba(1, 1, 1, 1);
+  .color-black__title{
+    border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(1, 1, 1, 0.3);
+    }
+    &_dotted{
+      border-bottom-style: dotted;
+    }
+  }
+  &:hover{
+    .color-black__title{
+      border-bottom-color: rgba(1, 1, 1, 0.6);
+    }
+  }
+}
+
+.color-grey{
+  color: rgba(112, 111, 117, 1);
+  .color-grey__title{
+    border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(112, 111, 117, 0.3);
+    }
+    &_dotted{
+      border-bottom-style: dotted;
+    }
+  }
+  &:hover{
+    .color-grey__title{
+      border-bottom-color: rgba(112, 111, 117, 0.6);
+    }
+  }
+}
+
+.color-blue{
+  color: rgba(0, 111, 190, 1);
+  .color-blue__title{
+    border-bottom: 1px solid transparent;
+    &_viewBorder{
+      border-bottom-color: rgba(0, 111, 190, 0.3);
+    }
+    &_dotted{
+      border-bottom-style: dotted;
+    }
+  }
+  &:hover{
+    .color-blue__title{
+      border-bottom-color: rgba(0, 111, 190, 0.6);
+    }
+  }
+}
+
 

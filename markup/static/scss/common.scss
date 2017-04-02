@@ -52,7 +52,64 @@ html, body {
   }
 }
 
+.copyright{
+  color: #706f75;
+  font-weight: 400;
+  display: table;
+  text-align: left;
+  >*{
+    display: table-cell;
+    vertical-align: middle;
+    +*{
+      padding-left: 35px;
+    }
+  }
+  i{
+    margin-top: -9px;
+  }
+}
+.modal-title {
+  font-family: Neris, sans-serif;
+}
 
+.callback{
+  background-color: #0488bf;
+  margin-bottom: 39px;
+  .container{
+    padding-bottom: 94px;
+    padding-top: 80px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -4px;
+      width: 142px;
+      height: 10px;
+      background-color: #2493e1;
+    }
+  }
+  &__title{
+    color: white;
+    font-family: Neris, sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 41px;
+    margin-bottom: 70px;
+  }
+  &__form{
+    display: table;
+    width: 100%;
+    margin: 0 auto;
+    &-cell{
+      display: table-cell;
+      vertical-align: top;
+      +*{
+        padding-left: 12px;
+      }
+    }
+  }
+}
 
 
 

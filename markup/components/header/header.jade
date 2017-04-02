@@ -1,5 +1,61 @@
 mixin header(data)
     .header.not-styleLink(class!=data)
+        .header__top
+            .container
+                .row
+                    .col-xl-4.col-lg-3
+                        a(href='#').header__logo: +img('/assets/header/logo', 'png')
+                    .col-xl-5.col-lg-6.col-md-8
+                        ul.header__nav.text-center
+                            li: a(href='#'): span О компании
+                            li: a(href='#'): span Статьи
+                            li: a(href='#'): span Наши работы
+                            li: a(href='#'): span Контакты
+
+                    .col-lg-3.col-md-4
+                        .header__contacts
+                            .header__contacts-icon: i.s-phone
+                            .header__contacts-text
+                                a(href='#').header__contacts-phone: span +7 900 021-49-13
+                                a(href='#', data-toggle="modal", data-target="#callback").header__contacts-callback: span Заказать звонок
+        .header__fix-buffer
+            .header__bottom.header__fix
+                .container
+                    .header__sections
+                        .header__sections-section
+                            .header__toggle
+                                a(href="#").header__toggle-link Каталог продукции
+                                    i.s-arrow-bottom
+                                .header__toggle-list.text-left
+                                    ul
+                                        li: a(href="#"): span Датчики уровня
+                                        li: a(href="#"): span Чеквееры
+                                        li: a(href="#"): span Дозаторы
+                                        li: a(href="#"): span Миксеры
+                                        li: a(href="#"): span Транспортеры
+                                        li: a(href="#"): span Фасовочное оборудование
+                                        li: a(href="#"): span Шкафы управления
+                                        li: a(href="#"): span Скада
+                        .header__sections-section
+                            .header__toggle
+                                a(href="#").header__toggle-link Услуги
+                                    i.s-arrow-bottom
+                                .header__toggle-list.text-left
+                                    ul
+                                        li: a(href="#"): span Датчики уровня
+                                        li: a(href="#"): span Чеквееры
+                                        li: a(href="#"): span Дозаторы
+                                        li: a(href="#"): span Миксеры
+                                        li: a(href="#"): span Транспортеры
+                                        li: a(href="#"): span Фасовочное оборудование
+                                        li: a(href="#"): span Шкафы управления
+                                        li: a(href="#"): span Скада
+
+                        .header__sections-section.header__sections-section_search.hidden-sm-down
+                            .header__search
+                                button.header__search-btn: i.s-search
+                                input.header__search-input(placeholder="Поиск")
+
 
 
 
