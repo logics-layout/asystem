@@ -1,1 +1,8 @@
-# ![logics](http://logics.su/logo-git.png)
+# ![logics](http://logics.su/projects39/index.jpg "Дом камня (корпоративный сайт)")
+Верстка реализована на сборщике frontend'а любой сложности [TARS](https://github.com/tars/tars), основанный на [Gulp](http://gulpjs.com/). Облегчает и ускоряет процесс разработки веб-сайтов/приложений, делая работу приятной и продуктивной. Подойдет как командам, так и отдельному разработчику. TARS решает большинство рутинных дел, связанных с веб-разработкой, чтобы вы получали больше удовольствия от работы.
+
+## Перечень страниц
+1. [Главная](http://logics.su/projects50/)
+2. [О компании](http://logics.su/projects50/inner.html)
+3. [Каталог](http://logics.su/projects50/catalog.html)
+4. [Детальная карточка](http://logics.su/projects50/detali.html)
