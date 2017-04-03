@@ -10,8 +10,8 @@ var data = {
             },
             {
                 img: "/assets/item/1",
-                title: "Фасовочный автомат WP-1440.05",
-                discount: "Скидка 10%",
+                title: "Фасовочный автомат",
+                discount: "Скидка 10%",  
                 price: {
                     default: '197 850',
                     discount: "240 950"

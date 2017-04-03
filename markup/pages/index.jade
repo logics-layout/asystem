@@ -1,9 +1,11 @@
 extends main
 
+include ../components/item/item
 
 block head
     - var headData = {title: "Главная"}
     - var breadcrumb = true
+    - var textFooter = true
     - var index = 'header_index'
 
     link(href="%=static=%css/separate-css/slick.css", rel="stylesheet", type="text/css")
@@ -23,35 +25,114 @@ block content
                                 p.slider-index__titleSub технологических процессов
 
     .container.container_before
-        .advantages
-            .advantages__section
-                .advantages__item
-                    .advantages__item-icon: +img('content/advantages/advantages-1', 'png')
-                    .advantages__item-desc
-                        p.advantages__item-title Оборудование и комплектующие
-                            br
-                            |для вашего производства
-                        p.advantages__item-text Индивидуальный подход позволяет подобрать
-                            br
-                            | оптимальное оборудование в зависимости
-                            br
-                            | от задач клиента
+        div(style="overflow: hidden;")
+            .advantages
+                .advantages__section
+                    .advantages__item
+                        .advantages__item-icon: +img('content/advantages/advantages-1', 'png')
+                        .advantages__item-desc
+                            p.advantages__item-title Оборудование и комплектующие
+                                br
+                                |для вашего производства
+                            p.advantages__item-text Индивидуальный подход позволяет подобрать&nbsp;
+                                br.hidden-xs-down
+                                | оптимальное оборудование в зависимости&nbsp;
+                                br.hidden-xs-down
+                                | от задач клиента
 
-            .advantages__section
-                .advantages__item
-                    .advantages__item-icon: +img('content/advantages/advantages-2', 'png')
-                    .advantages__item-desc
-                        p.advantages__item-title Доставка в любую точку России,
-                            br
-                            |в короткий срок
-                        p.advantages__item-text Работаем также в случаях повышенной
-                            br
-                            |срочности, оперативно решим проблему
-                            br
-                            |ваших производственных процессов
+                .advantages__section
+                    .advantages__item
+                        .advantages__item-icon: +img('content/advantages/advantages-2', 'png')
+                        .advantages__item-desc
+                            p.advantages__item-title Доставка в любую точку России,
+                                br
+                                |в короткий срок
+                            p.advantages__item-text Работаем также в случаях повышенной
+                                br
+                                |срочности, оперативно решим проблему
+                                br
+                                |ваших производственных процессов
 
 
-    .line-dashed.line-dashed_right: .container
+    .line-dashed.line-dashed_marginMin.line-dashed_right: .container
+
+    .container
+        p.title Каталог продукции
+        .index-category.not-styleLink
+            .index-category__section
+                .index-category__item.index-category__item_big.index-category__item-padding(style="background-image: url('%=static=%img/content/index-category/1.png');")
+                    .index-category__item-title Оборудование для производства,
+                        br
+                        |переработки и упаковки
+                        br
+                        |сыпучих материалов
+
+                    br
+                    ul.index-category__item-list
+                        li: a(href="#"): span Упаковочно-фасовочные машины
+                        li: a(href="#"): span Упаковочные машины
+                        li: a(href="#"): span Вспомогательное оборудование
+
+
+                    .index-category__item-bottom.index-category__item-padding
+                        a(href="#").index-category__item-link: span Смотреть
+            .index-category__section
+                .index-category__item.index-category__item-padding(style="background-image: url('%=static=%img/content/index-category/2.png');background-color: #3363c4;")
+                    .index-category__item-title датчики
+
+                    .index-category__item-bottom.index-category__item-padding
+                        a(href="#").index-category__item-link: span Смотреть
+                .index-category__item.index-category__item-padding(style="background-image: url('%=static=%img/content/index-category/3.png');background-color: #4145a5;")
+                    .index-category__item-title Шкафы
+                        br
+                        |автоматизации
+                        br
+                        |и управления
+
+                    .index-category__item-bottom.index-category__item-padding
+                        a(href="#").index-category__item-link: span Смотреть
+
+        br
+        br
+        p.title Услуги автоматизации технологических процессов
+        br
+        .services.not-styleLink
+            .services__section
+                a(href="#").services__item.color-blue
+                    span.services__item-img(style="background-image: url('%=static=%img/content/services/1.jpg');")
+                    span.services__item-title: span.color-blue__title.color-blue__title_viewBorder Проектирование
+            .services__section
+                a(href="#").services__item.color-blue
+                    span.services__item-img(style="background-image: url('%=static=%img/content/services/2.jpg');")
+                    span.services__item-title: span.color-blue__title.color-blue__title_viewBorder Монтаж
+            .services__section
+                a(href="#").services__item.color-blue
+                    span.services__item-img(style="background-image: url('%=static=%img/content/services/3.jpg');")
+                    span.services__item-title: span.color-blue__title.color-blue__title_viewBorder Пусконаладочные работы
+            .services__section
+                a(href="#").services__item.color-blue
+                    span.services__item-img(style="background-image: url('%=static=%img/content/services/4.jpg');")
+                    span.services__item-title: span.color-blue__title.color-blue__title_viewBorder Сервисное обслуживание
+        br
+    .line-dashed.line-dashed_marginMin: .container
+
+    .container
+        p.title Каталог продукции
+        br
+        .itemList
+            -for(var i=0;i<8;i++)
+                .itemList__section
+                    +item(i)
+        br
+        br
+        .text-center
+            a(href="#").big-link.not-styleLink.color-blue
+                span.color-blue__title.color-blue__title_viewBorder Смотреть еще
+                | &nbsp;&nbsp;&nbsp;
+                i.s-pagination-next
+        br
+        br
+
 
 
 block script

@@ -10,8 +10,8 @@ mixin item(num)
     a(href="#").item.not-styleLink.text-center
         -if(rowItem.discount)
             span.db.item__discount=rowItem.discount
-        span.db.item__img: +img('/assets/item/1')
-        span.db.item__title Фасовочный автомат WP-1440.05
+        span.db.item__img: +img(rowItem.img)
+        span.db.item__title=rowItem.title
         span.db.item__price
                 span.item__price-default=rowItem.price.default
                     +icon('rub')

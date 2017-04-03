@@ -6,6 +6,9 @@
   padding-top: 40px;
   padding-bottom: 26px;
   position: relative;
+  &:hover{
+    border-color: rgba(223, 223, 223, 1);
+  }
   &__discount{
     color: white;
     font-family: Neris, sans-serif;
@@ -37,6 +40,8 @@
     font-size: 15px;
     font-weight: 400;
     line-height: 22px;
+    height: 44px;
+    overflow: hidden;
   }
   &__btn{
     @include btn-clear;
