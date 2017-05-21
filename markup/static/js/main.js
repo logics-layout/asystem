@@ -168,3 +168,17 @@ if ($.fn.magnificPopup) {
         $(this).magnificPopup(magnificPopupObj);
     })
 }
+
+$('.tabs__list').find('a').click(function(e){
+    var _this = $(this),
+        href = _this.attr('href'),
+        parent = _this.parent(),
+        parentNode = _this.closest('.tabs'),
+        block = $(href),
+        time = 300,
+        className = 'active';
+
+    parentNode.find('.tabs__content-item').not(block).fadeOut(time);
+    block.delay(time).fadeIn(time);
+    parent.addClass(className).siblings().removeClass(className);
+});

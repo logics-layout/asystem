@@ -498,3 +498,163 @@ html, body {
     }
   }
 }
+
+.tabs{
+  &__list{
+    @include nl;
+    border: 2px solid #d8dadb;
+    display: inline-block;
+    border-radius: 2px;
+    &:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
+    li{
+      float: left;
+      padding: 0;
+      +*{
+        border-left: 1px solid #d8dadb;
+      }
+      a{
+        font-size: 19px;
+        font-weight: 300;
+        line-height: normal;
+        color: #6b757c;
+        padding: 0 45px;
+        padding-top: 14px;
+        padding-bottom: 12px;
+        display: block;
+        font-family: Neris, sans-serif;
+      }
+      &:first-child{
+        a{
+          border-radius: 2px 0 0 2px;
+        }
+      }
+      &:last-child{
+        a{
+          border-radius: 0 2px 2px 0;
+        }
+      }
+      &.active{
+        a{
+          color: white;
+          background-color: #3466c9;
+          border-color: #3466c9;
+        }
+      }
+    }
+  }
+  &__content{
+    &-item{
+      &:not(.active){
+        display: none;
+      }
+    }
+  }
+}
+
+.table-block{
+  display: table;
+  &__cell{
+    display: table-cell;
+    vertical-align: top;
+    +*{
+      padding-left: 50px;
+    }
+    &_img{
+      width: 303px;
+    }
+  }
+}
+
+.img-big{
+  background-color: white;
+  img{
+    border-radius: 4px;
+  }
+}
+
+.table-listItem{
+  display: table;
+  width: 100%;
+  &__row{
+    display: table-row;
+    &:nth-of-type(2n-1){
+      .table-listItem__cell{
+        background-color: #f0f3f4;
+      }
+    }
+  }
+  &__cell{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 14px 16px;
+    &_img{
+      width: 1px;
+    }
+  }
+  &__img{
+    background-color: white;
+    border: 1px solid #d4d6d7;
+    width: 77px;
+    height: 71px;
+    display: block;
+    line-height: 66px;
+    overflow: hidden;
+  }
+  &__titles{
+    color: #36373a;
+    font-size: 15px;
+    &-name{
+      font-size: 17px;
+    }
+  }
+  &__version{
+    color: #727377;
+    font-size: 15px;
+  }
+  &__price{
+    color: #313131;
+    font-family: Neris, sans-serif;
+    font-size: 21px;
+    font-weight: 900;
+    line-height: 30px;
+  }
+  &__btn{
+    color: #35a80e;
+    font-family: Neris, sans-serif;
+    font-size: 14px;
+    font-weight: 900;
+    line-height: 25px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    >span{
+      display: block;
+      border: 2px solid #2ba600;
+      border-radius: 2px;
+      padding: 7.5px 20px;
+    }
+    &:hover{
+      >span{
+        background-color: #2ba600;
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -322,6 +322,65 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, md) - 1) {
+
+  .table-listItem {
+    display: block;
+    width: 100%;
+    &__row {
+      display: block;
+      padding: 7px 5px;
+      font-size: 0;
+      text-align: center;
+      &:nth-of-type(2n-1) {
+        background-color: #f0f3f4;
+        .table-listItem__cell {
+          background-color: transparent;
+        }
+      }
+    }
+    &__cell {
+      display: inline-block;
+      padding: 8px 10px;
+      font-size: 14px;
+      &_img {
+        width: 20%;
+      }
+      &_titles{
+        width: 80%;
+        text-align: left;
+      }
+    }
+  }
+
+  .tabs {
+    &__list {
+      display: block;
+      li {
+        display: block;
+        float: none;
+        text-align: center;
+        a{
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+      }
+    }
+  }
+
+  .table-block{
+    display: block;
+    &__cell{
+      display: block;
+      +*{
+        padding-left: 0;
+        padding-top: 20px;
+      }
+      &_img{
+        width: auto;
+      }
+    }
+  }
+
   .index-category__item{
     padding-top: 27px;
     padding-bottom: 27px;
@@ -432,6 +491,20 @@ body, html{
 }
 
 @include my-media-query(max, map_get($grid-breakpoints, sm) - 1) {
+  .table-listItem {
+    &__cell {
+      &_img {
+        width: 100%;
+      }
+      &_titles{
+        width: 100%;
+        text-align: center;
+      }
+    }
+    &__img{
+      margin: 0 auto;
+    }
+  }
   .item {
     &__title {
       height: auto;
